@@ -1,0 +1,251 @@
+* {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  margin: none;
+  box-sizing: border-box;
+  
+}
+body {
+  
+  margin: 0;
+  background-color:#f7ede2;
+  min-width: 100vw;
+  overflow-x: hidden;
+ 
+}
+
+.index {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width: 100vw;
+  min-width: 600px;
+  height: 100vh;
+  left: 0px;
+  margin: none ;
+
+  /* background: linear-gradient(0deg, #2d1e2f, #2d1e2f); */
+}
+.sidebar{
+  position: fixed;
+  height: inherit;
+  color: #2d1e2f;
+  max-width:max-content;
+  z-index: 1000;
+  /* background-color: #f72c25; */
+}
+.sidebar i:hover{
+  cursor: pointer;
+  color: #f72c25;
+  animation: shake 1s ;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.ham{
+  cursor: pointer;
+  /* background-color: aqua; */
+  z-index: 1000000;
+  color:#2d1e2f;
+  background: url("/assets/menu-2-line.svg ");
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  height: 32px;
+  margin-left: 24px;
+  margin-top: 24px;
+  
+}
+.ham-toggle{
+  background: url("/assets/close-line.svg ");
+  background-repeat: no-repeat;
+}
+.ham:hover{
+animation: hideshow 0.7s;
+/* transform: translateX(-10%); */
+transition: ease-in-out;
+}
+@keyframes hideshow {
+  90% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.social-media{
+  position: fixed;
+  margin-left: 24px;
+  margin-top: 32vh;
+
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+.social-media i{
+  padding-bottom: 24px;
+}
+
+.vl {
+  border-left: 2px solid #2d1e2f;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  
+  bottom: 8px;
+}
+.nav{
+  cursor: pointer;
+  position:absolute;
+  z-index: 10;
+  background: rgba(246, 232, 232, 0.2);
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.slide {
+  transform: translateX(0%);
+}
+.nav-list{
+  list-style: none;
+ 
+}
+.nav-list-item{
+  
+  padding-top: 1rem;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+}
+.nav-list-item  :hover{
+  padding-top: 1rem;
+  color: #f72c25;
+  text-decoration-line: underline;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+  animation: backwards;
+  
+}
+.nav-list-item a,span{
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #2d1e2f;
+  padding: 0.5rem;
+}
+.nav-list-item a :hover{
+  transform: translateX(40%);
+  
+}
+.index-header {
+  position: relative;
+  width: 469.56px;
+  height: 230px;
+  margin-left: 37vh;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 112%;
+  /* or 115px */
+  display: flex;
+  align-items: center;
+  color: #2d1e2f;
+}
+.subtext {
+  position: absolute;
+  width: 469.56px;
+  height: 25px;
+  left: 37vh;
+  top: 66vh;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 112%;
+  /* or 25px */
+  color: #f7b32bff;
+}
+
+.index-image {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  
+}
+
+
+.img-element {
+
+  position: relative;
+  max-height: 100vh;
+  max-width: 100%;
+ 
+}
+
+.cta-btn-div {
+  position: absolute;
+  width: 180px;
+  height: 64px;
+  left: 37vh;
+  margin: 24px 0;
+  top: 80vh;
+}
+
+.cta-btn {
+  cursor: pointer;
+  padding: 6px 16px;
+  position: absolute;
+  padding: 0.8rem 1.2rem;
+  background: #f72c25;
+  border-radius: 24px;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 112%;
+  /* or 38px */
+  color: #f7ede2;
+  transition: background-color 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
+.cta-btn-div :hover{
+  background-color: #2d1e2f;
+  color: #a9e5bbff;
+  transform: scale(1.1);
+}
+
+/* ---keyframe */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+@media screen and (max-width: 900px){
+  .index-image{
+    display: none;
+  }
+}
